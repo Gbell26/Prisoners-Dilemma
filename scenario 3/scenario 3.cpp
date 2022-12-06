@@ -27,7 +27,7 @@ int main()
     float numSim = 0;
 
     //run sim 1000 times
-    while (numSim < 1000) {
+    while (numSim < 2000) {
         
         //loop through 4 prisoners
         while (loop < 4) {
@@ -77,7 +77,9 @@ int main()
             }
         }//end of while loop for 4 prisoners
 
+        //reset loop to 0 so the prisoners can loop through again on the next simulation
         loop = 0;
+
         //after all prisoners are looped through if released still equals true numReleased increments
         if (released == true) {
             
