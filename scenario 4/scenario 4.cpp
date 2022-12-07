@@ -30,6 +30,7 @@ int main()
 
 	//create for loop to fill array with as many options
 	float playThreshold[100];
+	float fraction = 0.00;
 
 	int die1;
 	int die2;
@@ -38,17 +39,10 @@ int main()
 	int totalDiceVal = 0;
 
 	for (int iteration = 0; iteration < 100;  iteration++) {
-		float fraction = 0.00;
 		playThreshold[iteration] = fraction;
 		fraction += 0.01;
 	}
-	for (int iteration = 0; iteration < 100; iteration++) {
-		cout << playThreshold[iteration];
-	}
 
-
-
-	
 	// run simulation for different thresholds
 	for (int number = 0; number < 100; number++) {
 
