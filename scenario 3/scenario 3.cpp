@@ -27,7 +27,7 @@ int main()
     float numSim = 0;
 
     //run sim 1000 times
-    while (numSim < 2000) {
+    while (numSim < 1000) {
         
         //loop through 4 prisoners
         while (loop < 4) {

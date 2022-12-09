@@ -32,16 +32,16 @@ int main()
 	float playThreshold[100];
 	float fraction = 0.00;
 
+	for (int iteration = 0; iteration < 100; iteration++) {
+		playThreshold[iteration] = fraction;
+		fraction += 0.01;
+	}
+
 	int die1;
 	int die2;
 	int die3;
 	int die4;
 	int totalDiceVal = 0;
-
-	for (int iteration = 0; iteration < 100;  iteration++) {
-		playThreshold[iteration] = fraction;
-		fraction += 0.01;
-	}
 
 	// run simulation for different thresholds
 	for (int number = 0; number < 100; number++) {
@@ -74,10 +74,11 @@ int main()
 		}
 
 		probabilityRelease = numReleased / numSim;
+		/*
 		cout << "With the chance of a prisoner playing being " << setprecision(2) << fixed << playThreshold[number] << ":" << endl;
 		cout << "Number of times prisoners released in " << numSim << " simulations was " << numReleased << endl;
 		cout << "Probablity of release is %" << probabilityRelease * 100 << endl;
-		cout << endl;
+		cout << endl;*/
 
 		if (probabilityRelease > greatesProbability) {
 			greatesProbability = probabilityRelease;
@@ -88,6 +89,7 @@ int main()
 		numSim = 0;
 	}
 	cout << endl;
+	cout << setprecision(2) << fixed;
 	cout << "The best threshold is " << bestThreshold << " with a probability of release being " << greatesProbability << endl;
 }
 int rollDie(float chanceOfPlaying, float threshold) {
