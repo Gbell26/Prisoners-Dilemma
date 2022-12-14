@@ -90,7 +90,7 @@ int main()
 	}
 	cout << endl;
 	cout << setprecision(2) << fixed;
-	cout << "The best threshold is " << bestThreshold << " with a probability of release being " << greatesProbability << endl;
+	cout << "The best threshold is " << bestThreshold << " with a probability of release being " << greatesProbability * 100 << endl;
 }
 int rollDie(float chanceOfPlaying, float threshold) {
 
